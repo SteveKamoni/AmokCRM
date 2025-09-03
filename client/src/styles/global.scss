@@ -1,0 +1,46 @@
+* { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  font-family: $font-base;
+  font-size: $font-size-base;
+  color: $color-text;
+  background: $color-background;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+a {
+  color: $color-primary;
+  text-decoration: none;
+  &:hover { text-decoration: underline; }
+}
+
+.app-shell {
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: auto 1fr;
+}
+
+.app-header {
+  background: $color-surface;
+  border-bottom: 1px solid $color-border;
+  padding: $spacing-md;
+  box-shadow: $shadow-sm;
+
+  .brand {
+    font-weight: 600;
+    font-size: 1.125rem;
+  }
+}
+
+.app-content {
+  @include mixins.container;
+  padding-top: $spacing-lg;
+  padding-bottom: $spacing-lg;
+
+  .card { @include mixins.card; }
+  h1 { font-size: $font-size-h1; margin-bottom: $spacing-sm; }
+  p { color: $color-text-secondary; }
+}
