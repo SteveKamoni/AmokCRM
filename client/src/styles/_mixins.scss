@@ -1,17 +1,15 @@
-@use '_variables' as v;
-
 @mixin container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 v.$spacing-md;
+  padding: 0 $spacing-md;
 }
 
 @mixin card {
-  background-color: v.$color-surface;
-  border: 1px solid v.$color-border;
-  border-radius: v.$radius-md;
-  padding: v.$spacing-md;
-  box-shadow: v.$shadow-sm;
+  background-color: $color-surface;
+  border: 1px solid $color-border;
+  border-radius: $radius-md;
+  padding: $spacing-md;
+  box-shadow: $shadow-sm;
 }
 
 @mixin flex-center {

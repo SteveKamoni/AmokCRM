@@ -2,17 +2,17 @@
 html, body, #root { height: 100%; }
 body {
   margin: 0;
-  font-family: v.$font-base;
-  font-size: v.$font-size-base;
-  color: v.$color-text;
-  background: v.$color-background;
+  font-family: $font-base;
+  font-size: $font-size-base;
+  color: $color-text;
+  background: $color-background;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
 a {
-  color: v.$color-primary;
+  color: $color-primary;
   text-decoration: none;
   &:hover { text-decoration: underline; }
 }
@@ -24,10 +24,10 @@ a {
 }
 
 .app-header {
-  background: v.$color-surface;
-  border-bottom: 1px solid v.$color-border;
-  padding: v.$spacing-md;
-  box-shadow: v.$shadow-sm;
+  background: $color-surface;
+  border-bottom: 1px solid $color-border;
+  padding: $spacing-md;
+  box-shadow: $shadow-sm;
 
   .brand {
     font-weight: 600;
@@ -35,12 +35,3 @@ a {
   }
 }
 
-.app-content {
-  @include m.container;
-  padding-top: v.$spacing-lg;
-  padding-bottom: v.$spacing-lg;
-
-  .card { @include m.card; }
-  h1 { font-size: v.$font-size-h1; margin-bottom: v.$spacing-sm; }
-  p { color: v.$color-text-secondary; }
-}
