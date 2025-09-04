@@ -1,14 +1,26 @@
+// vite.config.js
 import { defineConfig } from "vite";
 import react from "@vitejs/plugin-react";
+import path from "path";
+import { fileURLToPath } from "url";
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 export default defineConfig({
   plugins: [react()],
+  resolve: {
+    alias: {
+      "@": path.resolve(__dirname, "./src"),
+    },
+  },
   css: {
     preprocessorOptions: {
       scss: {
-        // Modern SCSS: expose variables/mixins globally via @use
-        additionalData: `@use "src/styles/_variables.scss" as *; 
-        @use "src/styles/_mixins.scss" as *;`,
+        additionalData: `
+          @use "@/styles/_variables.scss" as v;
+          @use "@/styles/_mixins.scss" as m;
+        `,
       },
     },
   },
