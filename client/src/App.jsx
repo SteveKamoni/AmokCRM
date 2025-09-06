@@ -1,10 +1,10 @@
 import React from 'react'
-import Sidebar from '../src/components/layout/Sidebar'
+import MainLayout from './components/layout/Layout'
 
 function App() {
   return (
     <div className="app-shell">
-      <Sidebar />
+      <MainLayout/>
     </div>
   )
 }

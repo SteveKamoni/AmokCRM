@@ -1,6 +1,8 @@
 import React from "react";
 import { FaBell, FaSearch, FaChevronDown } from "react-icons/fa";
 import styles from "../../styles/Header.module.scss";
+import { FaUserCircle } from "react-icons/fa";
+
 
 const Header = () => {
   return (
@@ -28,7 +30,7 @@ const Header = () => {
 
         <div className={styles.userMenu}>
           <img
-            src="https://via.placeholder.com/40"
+            src={FaUserCircle}
             alt="User Avatar"
             className={styles.avatar}
           />
