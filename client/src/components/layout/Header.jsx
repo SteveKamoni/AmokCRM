@@ -2,7 +2,7 @@ import React from "react";
 import { FaBell, FaSearch, FaChevronDown } from "react-icons/fa";
 import styles from "../../styles/Header.module.scss";
 import { FaUserCircle } from "react-icons/fa";
-
+// still on commit
 
 const Header = () => {
   return (
