@@ -1,38 +1,40 @@
-// src/components/layout/Sidebar/Sidebar.jsx
-import React from "react";
-import { FaHome, FaUsers, FaCog, FaSignOutAlt } from "react-icons/fa";
-import styles from "../../styles/Sidebar.module.scss";
+import React from 'react';
+import { NavLink } from 'react-router-dom';
+import styles from '../../styles/Sidebar.module.scss';
+import { LayoutDashboard, Users, Briefcase, Activity, LogOut } from 'lucide-react';
 
 const Sidebar = () => {
+  const menuItems = [
+    { name: 'Dashboard', icon: <LayoutDashboard size={18} />, path: '/dashboard' },
+    { name: 'Contacts', icon: <Users size={18} />, path: '/contacts' },
+    { name: 'Pipeline', icon: <Briefcase size={18} />, path: '/pipeline' },
+    { name: 'Activities', icon: <Activity size={18} />, path: '/activities' },
+  ];
+
   return (
     <aside className={styles.sidebar}>
-      {/* Logo Section */}
-      <div className={styles.logo}>
-        <h2>Amok CRM</h2>
+      <div className={styles.top}>
+        <h2 className={styles.logo}>AmokCRM</h2>
       </div>
 
-      {/* Navigation Links */}
-      <nav className={styles.nav}>
-        <ul>
-          <li className={styles.active}>
-            <FaHome className={styles.icon} />
-            <span>Dashboard</span>
-          </li>
-          <li>
-            <FaUsers className={styles.icon} />
-            <span>Clients</span>
-          </li>
-          <li>
-            <FaCog className={styles.icon} />
-            <span>Settings</span>
-          </li>
-        </ul>
+      <nav className={styles.menu}>
+        {menuItems.map((item) => (
+          <NavLink
+            key={item.name}
+            to={item.path}
+            className={({ isActive }) =>
+              isActive ? `${styles.link} ${styles.active}` : styles.link
+            }
+          >
+            {item.icon}
+            <span>{item.name}</span>
+          </NavLink>
+        ))}
       </nav>
 
-      {/* Footer Section */}
-      <div className={styles.footer}>
+      <div className={styles.bottom}>
         <button className={styles.logout}>
-          <FaSignOutAlt className={styles.icon} />
+          <LogOut size={18} />
           <span>Logout</span>
         </button>
       </div>

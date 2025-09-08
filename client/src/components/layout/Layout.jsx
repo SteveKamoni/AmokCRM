@@ -1,6 +1,6 @@
 import React from "react";
 import Sidebar from "../../components/layout/Sidebar";
-import Header from "../../components/layout/Header";
+import Navbar from "../../components/layout/Navbar";
 import styles from "../../styles/Layout.module.scss";
 // 
 const MainLayout = ({ children }) => {
@@ -11,7 +11,7 @@ const MainLayout = ({ children }) => {
 
       <div className={styles.main}>
         {/* Header */}
-        <Header />
+        <Navbar />
 
         {/* Dynamic Page Content */}
         <main className={styles.content}>{children}</main>

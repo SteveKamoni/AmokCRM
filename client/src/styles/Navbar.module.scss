@@ -1,0 +1,95 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.8rem 1.2rem;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+}
+
+.logoSection {
+  display: flex;
+  align-items: center;
+
+  .logoText {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #2563eb;
+  }
+}
+
+.searchSection {
+  flex: 1;
+  max-width: 400px;
+  display: flex;
+  align-items: center;
+  background-color: #f3f4f6;
+  padding: 0.4rem 0.8rem;
+  border-radius: 8px;
+  margin: 0 1rem;
+
+  svg {
+    margin-right: 0.5rem;
+    color: #6b7280;
+  }
+
+  .searchInput {
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.9rem;
+    color: #111827;
+  }
+}
+
+.actionsSection {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .quickAdd {
+    background: #2563eb;
+    color: #fff;
+    border: none;
+    padding: 0.4rem;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: background 0.2s;
+
+    &:hover {
+      background: #1e40af;
+    }
+  }
+
+  .notification {
+    position: relative;
+    cursor: pointer;
+
+    .badge {
+      position: absolute;
+      top: -4px;
+      right: -6px;
+      background: #ef4444;
+      color: #fff;
+      font-size: 0.7rem;
+      padding: 2px 5px;
+      border-radius: 999px;
+    }
+  }
+
+  .avatar {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    overflow: hidden;
+    cursor: pointer;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
